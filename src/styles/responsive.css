@@ -1,0 +1,153 @@
+.restaurant_list {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+/*
+  responsive Baru agar tidak bingung
+*/
+
+@media screen and (min-width: 650px) {
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+  }
+  .app-bar .app-bar_menu {
+    display: none;
+  }
+ 
+  .app-bar .app-bar_navigation {
+    position: static;
+    width: 100%;
+  }
+
+ 
+  .app-bar .app-bar_navigation ul li {
+    display: inline-block;
+  }
+ 
+  .app-bar .app-bar_navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+    align-items: center;
+    text-decoration: none;
+    
+  }
+
+
+}
+
+/*
+  batas baru
+*/
+@media screen and (max-width: 499px) {
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    
+
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-500px, 0);
+    transform: translate(-500px, 0);
+
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+
+  .open {
+    -webkit-transform: translate(0, 0);
+      transform: translate(0, 0);
+  }
+
+  .nav_item {
+      display: list-item;
+      border-bottom: 1px solid #e0e0e0;
+      width: 100%;
+      padding: 0;
+      text-align: left;
+      margin-left: 0;
+  }
+
+  .nav_list{
+    margin-top: 150px;
+    width: 100%;
+  }
+
+  header{
+    margin: 0;
+  }
+
+  .header_menu {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .hero_inner {
+    margin : 1rem;
+    max-width: 800px;
+    text-align: center;
+  
+  }
+
+  .nav_item:hover  a {
+    text-decoration: underline;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .nav_item a{
+    text-decoration: none;
+    min-height: 44px;
+    min-width: 44px;
+  }
+  .headline_button a{
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .header_menu {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 650px) {
+
+}
+
+@media screen and (min-width: 700px) {
+  .restaurant_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 16px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .nav_list {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 900px)  {
+  .restaurant_list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main {
+    max-width: 1200px;
+  }
+  .content {
+    max-width: 1200px;
+  }
+}

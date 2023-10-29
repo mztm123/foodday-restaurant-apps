@@ -1,0 +1,393 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Gabarito', cursive;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+a{
+  display: inline-block;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/*
+Skip Link
+*/
+
+.skip-link {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  padding: 5px;
+  background-color: #da281c;
+  color: white;
+  z-index: 100;
+  border-radius: 5px;
+  text-decoration: none;
+  min-width: 44px;
+  min-height: 44px;
+}
+.skip-link:focus {
+  top: 0;
+}
+
+/*
+  AppBar (Benar) Pengganti NavBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.app-bar .app-bar_menu {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar_menu button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.app-bar .app-bar_brand {
+  display: flex;
+  align-items: center;
+}
+
+.app-bar .app-bar_brand img {
+  width: 150px;
+}
+
+.app-bar .app-bar_navigation {
+  position: absolute;
+  top: 50px;
+  left: -180px;
+  width: 150px;
+  transition: all 0.3s;
+  padding: 8px;
+  background-color: white;
+  overflow: hidden;
+}
+
+.app-bar .app-bar_navigation.open {
+  left: 0;
+}
+
+.app-bar .app-bar_navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  width: 100%;
+  z-index: 99;
+}
+
+.app-bar .app-bar_navigation ul li:hover {
+  background-color: #da281c;
+  padding: 0px;
+  border-radius: 80px;
+  align-items: center;
+}
+
+.app-bar .app-bar_navigation ul li:hover a:hover {
+  color: white;
+}
+
+/*
+Nav Bar
+*/
+
+.navbar-container{
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  justify-content: space-around;
+  align-items: center;
+  top: 0;
+  padding-block: 1rem;
+  
+}
+
+.header {
+  margin-left: 0;
+  display: flex;
+}
+
+.header_menu {
+  font-size: 32px;
+  margin: 10px auto;
+  display: block;
+  width: 30px;
+  text-decoration: none;
+  border: none;
+  background-color: white;
+}
+
+.navbar-container .logo img {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  margin-left:3rem;
+ 
+}
+
+.navbar-container .nav {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav_list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  
+}
+
+.nav a {
+  display:inline-block;
+  padding: 0;
+  text-decoration: none;
+  color : black;
+  
+}
+
+.nav_item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 15%;
+  text-align: center;
+  line-height: 24x;
+  font-weight: 600;
+  margin-right: 10px;
+  
+
+}
+
+.nav_item a{
+  padding : 1.5rem;
+}
+
+.nav_item:hover  a {
+  background-color: #da281c;
+  color: white;
+  padding: 0.8rem;
+  border-radius: 80px;
+}
+
+/*
+Hero/Jumbotron
+*/
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/heros/hero-image_2.png');
+  background-position: center;
+  background-color: green;
+}
+
+.hero_inner {
+  margin : 80px;
+  max-width: 800px;
+  text-align: left;
+
+}
+
+.hero_title {
+  color: white;
+  font-weight: 800;
+  font-size: 60px;
+}
+
+.hero_tagline {
+  color:white;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.headline_button {
+  font-family: 'Gabarito', cursive;
+  text-transform: uppercase;
+  margin-top: 24px;
+  cursor: pointer;
+  padding: 1rem;;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  transition: opacity 0.3s;
+}
+
+.hero_inner  a {
+  text-decoration: none;
+}
+
+/*
+Main
+*/
+
+main {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+Content
+*/
+
+.content{
+  width: 100%;
+  margin: 60px auto;
+  text-align: center;
+  padding: 32px;
+}
+
+/*
+List/Card Restauran
+*/
+.restaurant_list_title{
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.restaurant_list{
+  display: flex;
+  margin: 32px auto auto;
+  text-align: left;
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card .image {
+  width: 100%;
+  border-radius: 10px;
+  min-height: min-content;
+}
+
+/*
+Restaurant Item (BENER)
+*/
+
+.restaurant-item {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.restaurant-item_header {
+  position: relative;
+}
+
+.restaurant-item .restaurant-item_header .restaurant-item_header_poster {
+  width: 100%;
+}
+
+.restaurant-item .restaurant-item_header .restaurant-item_header_rating {
+  position: absolute;
+  padding: 8px;
+  bottom: 20px;
+  left: 0;
+  display: inline-block;
+  background-color: black;
+  color: white;
+}
+
+.restaurant-item .restaurant-item_header .restaurant-item_header_rating .restaurant-item_header_score {
+  margin-left: 10px;
+}
+
+.restaurant-item .restaurant-item_content {
+  padding : 16px;
+}
+
+.restaurant-item .restaurant-item_content h3 {
+  margin: 0 0 10px 0;
+}
+
+.restaurant-item .restaurant-item_content h3 a {
+  color: black;
+  text-decoration: none;
+}
+
+.restaurant-item .restaurant-item_content p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+
+
+/*
+Footer
+*/
+
+footer {
+  background-color: #da281c;
+  padding: 2em;
+  width: 100%;
+  text-align: center;
+
+}
+
+footer ul {
+  margin: 0 auto;
+  display: inline-block;
+}
+
+footer li {
+  display: inline-block;
+  margin: 0 1em;
+  font-size: 14px;
+}
+
+footer a {
+  display: inline-block;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+footer p {
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+
