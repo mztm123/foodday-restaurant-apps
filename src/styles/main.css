@@ -10,6 +10,7 @@ body{
   padding: 0;
   height: 100%;
   width: 100%;
+  background-color: rgb(239, 238, 238);
 }
 
 a{
@@ -267,6 +268,7 @@ Content
   margin: 60px auto;
   text-align: center;
   padding: 32px;
+  
 }
 
 /*
@@ -308,6 +310,7 @@ Restaurant Item (BENER)
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   overflow: hidden;
+  background-color: white;
 }
 
 .restaurant-item_header {
@@ -318,18 +321,22 @@ Restaurant Item (BENER)
   width: 100%;
 }
 
+
 .restaurant-item .restaurant-item_header .restaurant-item_header_rating {
   position: absolute;
   padding: 8px;
-  bottom: 20px;
-  left: 0;
+  padding-left: 14px;
+  bottom: -4px;
+  left: -6px;
   display: inline-block;
-  background-color: black;
+  background-color: white;
   color: white;
+  border-radius: 10px; ;
 }
 
-.restaurant-item .restaurant-item_header .restaurant-item_header_rating .restaurant-item_header_score {
+.restaurant-item .restaurant-item_header .restaurant-item_header_rating .restaurant-item_header_rating_score {
   margin-left: 10px;
+  color: black;
 }
 
 .restaurant-item .restaurant-item_content {
@@ -346,6 +353,8 @@ Restaurant Item (BENER)
 }
 
 .restaurant-item .restaurant-item_content p {
+  font-weight: 200;
+  color: gray;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -353,7 +362,136 @@ Restaurant Item (BENER)
   -webkit-box-orient: vertical;
 }
 
+/*
+  Restaurant Detail
+*/
 
+.restaurant {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+  padding: 16px;
+  background-color: rgb(239, 238, 238);
+}
+
+.restaurant .restaurant_poster {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.restaurant .restaurant_info {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+}
+
+.restaurant .restaurant_info h2 {
+  color : #da281c;
+  
+}
+
+.restaurant .restaurant_description {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+}
+
+.restaurant .menu {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px 14px;
+  padding: 12px;
+  background-color: white;
+
+}
+
+/* .restaurant .menu .menu-title {
+  border-radius: 8px;
+  background-color: #da281c;
+  padding: 8px;
+  text-align: center;
+} */
+
+.restaurant .menu .menu-foods {
+  outline-color: #da281c;
+  outline-style: solid;
+  outline-width: 1px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+}
+
+.restaurant .menu .menu-drinks {
+  outline-color: #da281c;
+  outline-style: solid;
+  outline-width: 1px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  border-radius: 8px;
+  width: 100%;
+  padding: 12px;
+}
+
+.restaurant .review {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px 14px;
+  padding: 12px;
+  background-color: white;
+}
+
+.restaurant .review .review-item{
+  outline-color: gray;
+  outline-style: solid;
+  outline-width: 1px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  border-radius: 8px;
+  width: 100%;
+  display: grid;
+  padding: 8px;
+}
+
+.restaurant .review .review-item  p {
+  font-weight: 200;
+  text-decoration: underline;
+  font-size: 10px;
+  color: gray;
+}
+
+/*
+  Like
+*/
+.like {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #db0000;
+  
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+}
 
 /*
 Footer

@@ -1,4 +1,5 @@
 import RestaurantDbSource from "../../data/restaurant-source";
+import { createRestaurantItemTemplate } from "../templates/template-creator";
 
 const HomeList = {
     async render() {
@@ -23,8 +24,11 @@ const HomeList = {
     },
 
     async afterRender() {
-    const restaurants = await RestaurantDbSource.ListRestaurant();
-    console.log(restaurants);
+    const RestaurantList = await RestaurantDbSource.ListRestaurant();
+    const RestaurantListContainer = document.querySelector('#restaurant_list');
+    RestaurantList.forEach((restaurants) => {
+    RestaurantListContainer.innerHTML += createRestaurantItemTemplate(restaurants);
+    });
     },
 };
 
