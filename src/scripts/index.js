@@ -1,15 +1,12 @@
 import 'regenerator-runtime'; /* for async await transpile */
 import '../styles/main.css';
-import './main.js'; 
 import '../styles/responsive.css';
-import '../scripts/globals/config';
+import './globals/config';
 
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
-
-
-const app = new App ({
+const app = new App({
   button: document.querySelector('#hamburgerButton'),
   drawer: document.querySelector('#navigationDrawer'),
   content: document.querySelector('#mainContent'),
@@ -18,9 +15,8 @@ const app = new App ({
 window.addEventListener('hashchange', () => {
   app.renderPage();
 });
- 
+
 window.addEventListener('load', () => {
   app.renderPage();
   swRegister();
 });
-

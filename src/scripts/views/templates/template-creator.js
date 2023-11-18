@@ -1,8 +1,9 @@
+/* eslint-disable linebreak-style */
 import CONFIG from '../../globals/config';
 
 const createRestaurantDetailTemplate = (restaurant) => `
 
-    <img class="restaurant_poster" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
+    <img class="restaurant_poster" crossorigin="anonymous" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="${restaurant.name}" />
     <div class="restaurant_info">
         <h2 class="restaurant_title">${restaurant.name}</h2>
         <p>⭐️<span class="restaurant-item_header_rating_score">${restaurant.rating}</span></p>
@@ -59,8 +60,8 @@ const createRestaurantItemTemplate = (restaurants) => `
             <div class="restaurant-item_header_rating">
              <p>⭐️<span class="restaurant-item_header_rating_score">${restaurants.rating}</span></p>
             </div>
-            <img class="restaurant-item_header_poster" alt="${restaurants.name}"
-            src="${restaurants.pictureId ? CONFIG.BASE_IMAGE_URL + restaurants.pictureId : 'https://picsum.photos/id/666/800/450?grayscale' }">
+            <img class="restaurant-item_header_poster" crossorigin="anonymous" alt="${restaurants.name}"
+            src="${restaurants.pictureId ? CONFIG.BASE_IMAGE_URL + restaurants.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
         </div>
         <div class="restaurant-item_content">
             <h3><a href="/#/detail/${restaurants.id}">${restaurants.name}</a></h3>
@@ -75,16 +76,16 @@ const createLikeButtonTemplate = () => `
       <i class="fa fa-heart-o" aria-hidden="true"></i>
     </button>
   `;
-   
+
 const createLikedButtonTemplate = () => `
     <button aria-label="unlike this restaurant" id="likeButton" class="like">
       <i class="fa fa-heart" aria-hidden="true"></i>
     </button>
   `;
-    
+
 export {
-    createRestaurantItemTemplate,
-    createRestaurantDetailTemplate,
-    createLikeButtonTemplate,
-    createLikedButtonTemplate,
-}
+  createRestaurantItemTemplate,
+  createRestaurantDetailTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
+};

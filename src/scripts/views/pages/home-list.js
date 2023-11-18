@@ -1,9 +1,9 @@
-import RestaurantDbSource from "../../data/restaurant-source";
-import { createRestaurantItemTemplate } from "../templates/template-creator";
+import RestaurantDbSource from '../../data/restaurant-source';
+import { createRestaurantItemTemplate } from '../templates/template-creator';
 
 const HomeList = {
-    async render() {
-        return`
+  async render() {
+    return `
     <div class="hero">
         <div class="hero_inner">
          <h1 class="hero_title">FOODDAY</h1>
@@ -21,15 +21,15 @@ const HomeList = {
         </div>
     </section>
         `;
-    },
+  },
 
-    async afterRender() {
+  async afterRender() {
     const RestaurantList = await RestaurantDbSource.ListRestaurant();
     const RestaurantListContainer = document.querySelector('#restaurant_list');
     RestaurantList.forEach((restaurants) => {
-    RestaurantListContainer.innerHTML += createRestaurantItemTemplate(restaurants);
+      RestaurantListContainer.innerHTML += createRestaurantItemTemplate(restaurants);
     });
-    },
+  },
 };
 
 export default HomeList;

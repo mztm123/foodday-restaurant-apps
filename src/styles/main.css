@@ -113,90 +113,7 @@ Skip Link
   color: white;
 }
 
-/*
-Nav Bar
-*/
 
-.navbar-container{
-  width: 100%;
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 10px;
-  justify-content: space-around;
-  align-items: center;
-  top: 0;
-  padding-block: 1rem;
-  
-}
-
-.header {
-  margin-left: 0;
-  display: flex;
-}
-
-.header_menu {
-  font-size: 32px;
-  margin: 10px auto;
-  display: block;
-  width: 30px;
-  text-decoration: none;
-  border: none;
-  background-color: white;
-}
-
-.navbar-container .logo img {
-  display: flex;
-  align-items: center;
-  width: 150px;
-  margin-left:3rem;
- 
-}
-
-.navbar-container .nav {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.nav_list {
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  text-align: right;
-  
-}
-
-.nav a {
-  display:inline-block;
-  padding: 0;
-  text-decoration: none;
-  color : black;
-  
-}
-
-.nav_item {
-  box-sizing: border-box;
-  display: inline-block;
-  width: 15%;
-  text-align: center;
-  line-height: 24x;
-  font-weight: 600;
-  margin-right: 10px;
-  
-
-}
-
-.nav_item a{
-  padding : 1.5rem;
-}
-
-.nav_item:hover  a {
-  background-color: #da281c;
-  color: white;
-  padding: 0.8rem;
-  border-radius: 80px;
-}
 
 /*
 Hero/Jumbotron
@@ -274,6 +191,7 @@ Content
 /*
 List/Card Restauran
 */
+
 .restaurant_list_title{
   font-size: 30px;
   font-weight: 400;
