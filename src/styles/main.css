@@ -59,6 +59,7 @@ Skip Link
 .app-bar .app-bar_menu {
   display: flex;
   align-items: center;
+  margin-right: 150px;
 }
 
 .app-bar .app-bar_menu button {
@@ -131,7 +132,7 @@ Hero/Jumbotron
 }
 
 .hero_inner {
-  margin : 80px;
+  margin-left : 152px;
   max-width: 800px;
   text-align: left;
 
@@ -182,7 +183,7 @@ Content
 
 .content{
   width: 100%;
-  margin: 60px auto;
+  margin: 0 auto;
   text-align: center;
   padding: 32px;
   
@@ -409,6 +410,12 @@ Restaurant Item (BENER)
   font-size: 18px;
   color: white;
   cursor: pointer;
+}
+
+.restaurant-item__not__found {
+  font-size: 1rem;
+  max-width: 100%;
+  text-align: center;
 }
 
 /*

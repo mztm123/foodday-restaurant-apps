@@ -64,20 +64,20 @@ const createRestaurantItemTemplate = (restaurants) => `
             src="${restaurants.pictureId ? CONFIG.BASE_IMAGE_URL + restaurants.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
         </div>
         <div class="restaurant-item_content">
-            <h3><a href="/#/detail/${restaurants.id}">${restaurants.name}</a></h3>
+            <h3 class="restaurant-title"><a href="/#/detail/${restaurants.id}">${restaurants.name}</a></h3>
             <h4><span><i class="fa-solid fa-location-dot"></i></span>${restaurants.city}</h4>
             <p>${restaurants.description}</p>  
         </div>
     </div>
     `;
 
-const createLikeButtonTemplate = () => `
+const createLikeRestaurantButtonTemplate = () => `
     <button aria-label="like this restaurant" id="likeButton" class="like">
       <i class="fa fa-heart-o" aria-hidden="true"></i>
     </button>
   `;
 
-const createLikedButtonTemplate = () => `
+const createUnlikeRestaurantButtonTemplate = () => `
     <button aria-label="unlike this restaurant" id="likeButton" class="like">
       <i class="fa fa-heart" aria-hidden="true"></i>
     </button>
@@ -86,6 +86,6 @@ const createLikedButtonTemplate = () => `
 export {
   createRestaurantItemTemplate,
   createRestaurantDetailTemplate,
-  createLikeButtonTemplate,
-  createLikedButtonTemplate,
+  createLikeRestaurantButtonTemplate,
+  createUnlikeRestaurantButtonTemplate,
 };
