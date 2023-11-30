@@ -59,7 +59,6 @@ Skip Link
 .app-bar .app-bar_menu {
   display: flex;
   align-items: center;
-  margin-right: 150px;
 }
 
 .app-bar .app-bar_menu button {
@@ -121,20 +120,48 @@ Hero/Jumbotron
 */
 
 .hero {
-  display: flex;
+  /* display: flex;
   align-items: center;
   min-height: 500px;
   width: 100%;
+  text-align: center; 
+  background-color: green; */
+  /* background-image: url('../public/images/heros/hero-image_2.jpeg'); */
+  background-position: 50%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  background-image: url('../public/images/heros/hero-image_2.png');
-  background-position: center;
-  background-color: green;
+}
+
+.hero picture {
+  width: 100%;
+  max-height: 100%;
+  background-color: #da281c;
+}
+
+.hero picture img {
+  object-fit: cover;
+  width: 100%;
+  height: 600px ;
+  opacity: .5;
+  filter: blur(2px);
 }
 
 .hero_inner {
-  margin-left : 152px;
-  max-width: 800px;
+  order: -1;
+  position: absolute;
+  z-index: 100;
+  margin-top: 150px;
+  align-items: left;
+  padding: 40px;
+  
+  /* margin-left : 152px; */
+  /* max-width: 800px;
   text-align: left;
+  align-items: center;
+  
+  object-fit: contain; */
 
 }
 
@@ -237,6 +264,10 @@ Restaurant Item (BENER)
 }
 
 .restaurant-item .restaurant-item_header .restaurant-item_header_poster {
+  width: 100%;
+}
+
+.restaurant-item .restaurant-item_header .restaurant-item_header_poster img {
   width: 100%;
 }
 

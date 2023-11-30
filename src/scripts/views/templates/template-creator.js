@@ -60,8 +60,10 @@ const createRestaurantItemTemplate = (restaurants) => `
             <div class="restaurant-item_header_rating">
              <p>⭐️<span class="restaurant-item_header_rating_score">${restaurants.rating}</span></p>
             </div>
-            <img class="restaurant-item_header_poster" crossorigin="anonymous" alt="${restaurants.name}"
-            src="${restaurants.pictureId ? CONFIG.BASE_IMAGE_URL + restaurants.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+           <div  class="restaurant-item_header_poster">
+            <img class="lazyload" crossorigin="anonymous" alt="${restaurants.name}"
+            data-src="${restaurants.pictureId ? CONFIG.BASE_IMAGE_URL + restaurants.pictureId : 'https://picsum.photos/id/666/800/450?grayscale'}">
+           </div>
         </div>
         <div class="restaurant-item_content">
             <h3 class="restaurant-title"><a href="/#/detail/${restaurants.id}">${restaurants.name}</a></h3>
